@@ -4,13 +4,13 @@
 let numbersOfLines = 1;
 
 console.log('Linea #', numbersOfLines);
-numbersOfLines = numbersOfLines + 1;
+numbersOfLines++;
 
 console.log('Linea #', numbersOfLines);
-numbersOfLines = numbersOfLines + 1;
+numbersOfLines++;
 
 console.log('Linea #', numbersOfLines);
-numbersOfLines = numbersOfLines + 1;
+numbersOfLines+=1;
 
 console.log('Linea #', numbersOfLines);
 numbersOfLines = numbersOfLines + 1;
