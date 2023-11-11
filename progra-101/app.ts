@@ -4,7 +4,7 @@
 //Programacion secuencial
 let numbersOfLines = 1;
 
-console.log('Linea #', numbersOfLines);
+/* console.log('Linea #', numbersOfLines);
 numbersOfLines++;
 
 console.log('Linea #', numbersOfLines);
@@ -13,20 +13,16 @@ numbersOfLines++;
 console.log('Linea #', numbersOfLines);
 numbersOfLines+=1;
 
-console.log('Linea #', numbersOfLines);
-numbersOfLines = numbersOfLines + 1;
+console.log('Linea #', numbersOfLines); */
 
 //Funciones en JavaScript
 
-function increaseLineNumber(){
-    numbersOfLines +=3;
+function printLineNumber(){
+    console.log('Linea #', numbersOfLines);
+    numbersOfLines +=1;
 }
 
-increaseLineNumber()
-console.log('Linea #', numbersOfLines);
-
-increaseLineNumber()
-console.log('Linea #', numbersOfLines);
-
-increaseLineNumber()
-console.log('Linea #', numbersOfLines);
+printLineNumber();
+printLineNumber();
+printLineNumber();
+printLineNumber();
