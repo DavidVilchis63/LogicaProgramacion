@@ -24,5 +24,5 @@ let isRunning: boolean = true;
 let hasKids: boolean = false;
 
 console.log("Esta activo:", isActive);
-console.log("Esta corriendo:", !isRunning);
+console.log("Esta corriendo:", ! isRunning);
 console.log("Esta activo:", hasKids);
