@@ -1,4 +1,0 @@
-node app.ts // Ejecuta el programa
-
-npm run dev:watch // Ejecuta el codigo en tiempo real
-
