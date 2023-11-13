@@ -18,9 +18,7 @@ if (grade >= 60){
 } else if (grade > 50) {
     console.log("Estudiar mas");
 } else {
-        console.log("Calificacion reprobatoria");
-    }
-   
-
+    console.log("Calificacion reprobatoria");
+}   
 
 console.log("Fin de programa");
