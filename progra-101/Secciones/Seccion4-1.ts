@@ -7,11 +7,11 @@
 
 //Ejemplo funcion
 
-function addTwoNumbers (num1:number, num2:number){
+function addTwoNumbersExample (num1:number, num2:number){
     let resultado = num1 + num2;
     return resultado;
 }
 
-let total1:number = addTwoNumbers(20,63);
+let total1:number = addTwoNumbersExample(20,63);
 
 console.log("La suma es:" ,total1);
