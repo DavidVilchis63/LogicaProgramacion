@@ -7,4 +7,4 @@ let people =['Fernando', "Melissa", "Eduardo"];
 console.log(people[1]);
 
 
-// Ejercicio
+// Ejercicio 
