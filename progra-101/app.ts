@@ -8,3 +8,12 @@ console.log(people[1]);
 
 
 // Ejercicio 
+
+let flowers: string[] = ["Girasol", "Rosa", "Lirio", "RosaBlanca"];
+
+console.log(flowers.length);
+
+for(let i= 0; i < flowers.length; i++){
+    
+    console.log(flowers[i]);
+}
