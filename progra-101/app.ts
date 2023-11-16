@@ -1,4 +1,2 @@
 
-import { printMultiplication } from './helpers/print-multiplication';
-
-printMultiplication (5,20);
+console.log("Hola mundo");
