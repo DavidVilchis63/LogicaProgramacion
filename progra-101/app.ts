@@ -15,7 +15,7 @@ class Car {
     constructor(){
         this.brand = "No brand";
         this.doors = 0 ;
-        this.fuelTank = 100 ;
+        this.fuelTank = 0 ;
         this.isRunning = false;
         this.type = "No type";
 
@@ -28,9 +28,16 @@ class Car {
             console.log("El carro ya estaba encendido..daño en motor")
             return;
         }
+
+        if ( this.fuelTank <= 0){
+            console.log("El carro no tiene gasolina");
+            return;
+        }
         
         this.isRunning = true;
         console.log("El carro esta encendido");
+
+
         
     }
     
