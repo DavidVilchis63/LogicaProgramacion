@@ -36,9 +36,30 @@ class Car {
         
         this.isRunning = true;
         console.log("El carro esta encendido");
+        
+    }
 
+    fillTank( gas: number){
+
+        if (gas <= 0){
+            console.log("No se aceptan valores negativos");
+            return;
+        }
+
+        if (this.fuelTank < 100){
+
+            this.fuelTank = this.fuelTank + gas;
+            return;
+        }
+
+        if (this.fuelTank >= 100){
+
+            console.log("Tanque lleno, no sobre llenar");
+            return;
+        }
 
         
+        this.fuelTank = gas;
     }
     
 }
@@ -46,5 +67,6 @@ class Car {
 let myMazda = new Car();
 
 console.log(myMazda);
+myMazda.fillTank(-90);
 myMazda.turnOn();
 console.log(myMazda);
