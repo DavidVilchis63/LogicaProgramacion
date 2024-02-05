@@ -46,20 +46,16 @@ class Car {
             return;
         }
 
-        if (this.fuelTank < 100){
+        let newFuelTank = this.fuelTank + gas;
 
-            this.fuelTank = this.fuelTank + gas;
-            return;
-        }
+        if (newFuelTank >= 100){
+            this.fuelTank =100
+        } else{
 
-        if (this.fuelTank >= 100){
-
-            console.log("Tanque lleno, no sobre llenar");
-            return;
+            this.fuelTank = 100;
         }
 
         
-        this.fuelTank = gas;
     }
     
 }
@@ -67,6 +63,7 @@ class Car {
 let myMazda = new Car();
 
 console.log(myMazda);
-myMazda.fillTank(-90);
+myMazda.fillTank(90);
+myMazda.fillTank(90);
 myMazda.turnOn();
 console.log(myMazda);
