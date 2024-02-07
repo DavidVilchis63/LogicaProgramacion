@@ -1,0 +1,15 @@
+
+//Ejercicio 6
+
+let num1 = 1;
+
+for ( let i=1; i <= 5; i++){
+    let line = '';
+
+    for (let j = 1; j <= 5; j++){
+        line = line + ' ' + (j * i);
+    }
+
+    console.log(line);
+
+}
