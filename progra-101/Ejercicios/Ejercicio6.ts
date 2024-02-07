@@ -1,8 +1,6 @@
 
 //Ejercicio 6
 
-let num1 = 1;
-
 for ( let i=1; i <= 5; i++){
     let line = '';
 
