@@ -11,9 +11,13 @@ function App() {
 
   const checkLetter = ( letter: string ) => {
 
-    console.log(letter);
-    setAttempts ( Math.min ( attempts + 1, 9 ));
+    if ( !word.includes(letter)) { 
 
+      setAttempts ( Math.min ( attempts + 1, 9 ));
+      return;
+    }
+
+    console.log( hiddenWord );
   }
 
 
