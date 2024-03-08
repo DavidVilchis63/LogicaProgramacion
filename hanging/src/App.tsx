@@ -1,27 +1,41 @@
+import { useState } from 'react';
 import './App.css';
 import { HangImage } from './components/HandImage';
 import {letters} from './helpers/letters';
 
 function App() {
 
+  const [ attempts, setAttempts ] = useState(0);
+
+  const checkLetter = ( letter: string ) => {
+
+    console.log(letter);
+    setAttempts ( Math.min ( attempts + 1, 9 ));
+
+  }
+
+
   return (
     <div className='App'>
 
           {/* Imagenes */}
-          <HangImage imageNumber={0}/>
+          <HangImage imageNumber={ attempts }/>
 
           {/* Palabra oculta */}
           <h3>_ _ _ _ _ _ _ _ _ _</h3>
 
           {/* Contador de intentos */}
-          <h3> Intentos : 0</h3>
+          <h3> Intentos : { attempts }</h3>
 
           {/* Botones */}
           {
             letters.map( (letter) => (
-              <button 
-               key= { letter }>
-                { letter }
+              <button
+              
+                onClick={ () => checkLetter(letter) }
+                
+                key= { letter }>
+                  { letter }
               </button>
             ))
           }
