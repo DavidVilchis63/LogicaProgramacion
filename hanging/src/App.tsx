@@ -6,11 +6,11 @@ import { getRamdonWord } from './helpers/getWord';
 
 function App() {
 
-  const [ word ] = useState( getRamdonWord );
+  const [ word, setWord ] = useState( getRamdonWord );
   const [ hiddenWord, setHiddenWord ] = useState( "_ ".repeat(word.length) );
   const [ attempts, setAttempts ] = useState(0);
   const [ lose, setLose ]= useState( false );
-  const [ won, setWone ]= useState( false );
+  const [ won, setWon ]= useState( false );
 
   //Determinar si la persona perdio
   useEffect( () => {
@@ -27,7 +27,7 @@ function App() {
 
     const currentHiddenWord = hiddenWord.split(" ").join("");
     if (currentHiddenWord === word) {
-      setWone(true);
+      setWon(true);
     }
 
 
@@ -55,6 +55,17 @@ function App() {
       
     }
     setHiddenWord(hiddenWordArray.join(" "));
+  }
+
+  const newGame = () => {
+
+    const newWord = getRamdonWord();
+    setWord(newWord);
+    setHiddenWord("_ ".repeat(newWord.length));
+    setAttempts(0);
+    setLose(false);
+    setWon(false);
+
   }
 
 
@@ -96,6 +107,9 @@ function App() {
               </button>
             ))
           }
+
+          <br /><br />
+          <button onClick={ () => newGame() }>¿Nuevo juego?</button>
 
     </div>
   );
