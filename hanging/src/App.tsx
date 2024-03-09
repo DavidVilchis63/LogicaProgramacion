@@ -2,10 +2,11 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import { HangImage } from './components/HandImage';
 import {letters} from './helpers/letters';
+import { getRamdonWord } from './helpers/getWord';
 
 function App() {
 
-  const [ word ] = useState( "COMPUTADORA" );
+  const [ word ] = useState( getRamdonWord );
   const [ hiddenWord, setHiddenWord ] = useState( "_ ".repeat(word.length) );
   const [ attempts, setAttempts ] = useState(0);
   const [ lose, setLose ]= useState( false );
@@ -37,6 +38,7 @@ function App() {
   const checkLetter = ( letter: string ) => {
 
     if ( lose ) return;
+    if ( won ) return;
 
     if ( !word.includes(letter)) { 
 
